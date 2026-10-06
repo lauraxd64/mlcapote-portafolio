@@ -10454,5 +10454,33 @@ img {
     transform: scale(1);
   }
 }
+/* Contenedor responsivo adaptado para las tarjetas del portafolio */
+.responsive-video-container {
+  position: relative;
+  width: 100vw;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--black);
+}
+
+/* Si el video es vertical (estilo Reel/TikTok) */
+.responsive-video-container.ratio-916 {
+  aspect-ratio: 9 / 16;
+  max-height: 500px; /* Limita la altura en pantallas de escritorio muy alargadas */
+}
+
+/* Si prefieres formato horizontal (16:9) */
+.responsive-video-container.ratio-169 {
+  aspect-ratio: 16 / 9;
+}
+
+/* Forzar el comportamiento correcto del video dentro de la tarjeta */
+.responsive-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que el video se estire o deforme */
+  display: block;
+}
 
 /*====== Components End ======*//*# sourceMappingURL=main.css.map */
