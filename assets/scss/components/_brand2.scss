@@ -1,0 +1,37 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.brand2 {
+    overflow: hidden;
+    &-title {
+        color: $white-color;
+        text-align: center;
+        font-family: $title-font;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &-logo {
+        padding: 112px 40px;
+        border-radius: 10px;
+        border: 1px solid $border-color1;
+        background: $black-color;
+        text-align: center;
+
+        @include breakpoint (max-xxxl) {
+            padding: 60px 25px;
+        }
+        @include breakpoint (max-sm) {
+            margin: 0 15px;
+        }
+        img {
+            width: 180px;
+            height: 65px;
+            object-fit: contain;
+        }
+    }
+}

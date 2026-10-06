@@ -1,0 +1,56 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.blog1 {
+    .section-top {
+        margin-bottom: 130px; 
+    }
+
+    &-card {
+        padding: 45px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(217, 217, 217, 0.00);
+
+        &-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $border-color2;
+
+            &__item {
+                color: $white-color;
+                font-family: $body-font;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+            }
+        }
+
+        &__title {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: $white-color;
+            font-weight: 700;
+        }
+
+        &__link {
+            display: block;
+            margin-top: 30px;
+            color: $white-color;
+            font-family: $body-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; 
+            text-transform: uppercase;
+            
+            @media (max-width: 1500px) {
+                font-size: 15px;
+                line-height: 1.4;
+            }
+        }
+    }
+}

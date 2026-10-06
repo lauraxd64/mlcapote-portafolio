@@ -1,0 +1,171 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.project1 {
+    position: relative;
+
+    &-titleArea {
+        margin-bottom: 130px;
+        background-color: $white-color;
+    }
+ 
+
+    &-card {
+        border-radius: 10px;
+        border: 1px solid #1F1F1F;
+        background: $black-color;
+
+        &-meta {
+            position: relative;
+            padding: 20px 30px 20px;
+            display: flex;
+            justify-content: end;
+            gap: 15px;
+            z-index: 6;
+
+            @include breakpoint (max-md) {
+                padding: 20px 8px 20px;
+                gap: 5px;
+            }
+
+            &__item {
+                display: inline-flex;
+                padding: 7px 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 65px;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: rgba(217, 217, 217, 0.00);
+                color: $white-color;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+
+
+                @include breakpoint(max-xxl) {
+                    padding: 5px 10px;
+                    font-size: 16px;
+                    background-color: $black-color;
+                }
+            }
+        }
+
+        &__thumb {
+            position: relative;
+            margin-top: -75px;
+
+            @include breakpoint(max-xxl) {
+                mask-image: none !important;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            &-link {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                z-index: 5;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include transition;
+
+
+                @include breakpoint (max-lg) {
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50%, -70%);
+
+                    a {
+                        svg {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    svg path {
+                        stroke: $theme-color2;
+                        @include transition;
+
+                    }
+
+                    circle {
+                        fill: $theme-color1;
+                        @include transition;
+
+                    }
+                }
+            }
+
+            &:hover {
+                .project1 {
+                    &-card {
+                        &__thumb {
+                            &-link {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+
+            @include breakpoint (max-md) {
+                padding: 15px;
+            }
+
+            &__title {
+                color: $white-color;
+                font-family: $title-font;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 40px;
+                text-transform: uppercase;
+
+                @include breakpoint (max-xl) {
+                    font-size: 17px;
+                    line-height: 1.2;
+                }
+            }
+
+            &__button {
+                display: inline-flex;
+                padding: 7px 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 65px;
+                background: #FFF;
+                color: $theme-color1;
+                font-family: Manrope;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 130px 0 130px;
+    }
+}

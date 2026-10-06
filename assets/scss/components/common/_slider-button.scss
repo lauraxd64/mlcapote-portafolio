@@ -1,0 +1,60 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+/*----------------------------------------------
+    # Buttons style here
+----------------------------------------------*/
+.element-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    &__arrowLeft {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $white-color;
+        background-color: $theme-color1;
+        color: $white-color;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        svg path {
+            stroke: $white-color;
+        }
+        &:hover { 
+        border: 1px solid $bg-color1;
+        svg path {
+            stroke: $bg-color1;
+        }
+        }
+    }
+
+    &__arrowRight {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $white-color;
+        background-color: $theme-color1;
+        color: $white-color;
+        border-radius: 50%;  
+        transition: all 0.3s ease;
+
+        svg path {
+            stroke: $white-color;
+        }
+
+        &:hover { 
+        border: 1px solid $bg-color1;
+
+        svg path {
+            stroke: $bg-color1;
+        }
+        }
+    }
+}

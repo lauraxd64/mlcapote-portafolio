@@ -1,0 +1,59 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+.counter1 {
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        @include breakpoint (max-lg) {
+            justify-content: start;
+        }
+
+        &-box {
+            h1 {
+                padding-bottom: 27px;
+                @include breakpoint(max-xl) {
+                    line-height: 150px;
+                }
+            }
+            &__label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: $white-color;
+                font-family: $body-font;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px; 
+                text-transform: uppercase;
+                border-radius: 66px;
+                border: 1px solid $white-color;
+                background: rgba(255, 251, 245, 0.00);
+                padding: 20px 40px;
+                width: 437px;
+                img {
+                    padding-right: 15px;
+                }
+                a {
+                    color: $white-color;
+                    &:hover {
+                        color: $theme-color2;
+                    }
+                }
+                @include breakpoint (max-xxl) {
+                    font-size: 20px;
+                    padding: 20px 20px;
+                    width: 385px;
+                }
+                @include breakpoint (max-lg) {
+                    width: 325px;
+                }
+            }
+        }    
+    }
+}

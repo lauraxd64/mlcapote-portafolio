@@ -1,0 +1,282 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.award1 {
+    position: relative;
+
+    @include breakpoint (xl) {
+        background: $white-color;
+    }
+
+    &__shape1 {
+        background: $white-color2;
+        position: absolute;
+        top: 17%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__shape {
+        @include breakpoint (max-lg) {
+            display: none;
+        }
+
+        img {
+            @include breakpoint (max-xxl) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__thumb {
+        @include breakpoint (max-lg) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .row {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        color: $white-color;
+        font-family: $title-font;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 130px;
+        text-transform: uppercase;
+        text-align: start;
+
+        @include breakpoint (max-xl3) {
+            font-size: 76px;
+        }
+
+        @include breakpoint (max-xxl) {
+            font-size: 65px;
+            line-height: 100px;
+        }
+
+        @include breakpoint (max-xl) {
+            font-size: 54px;
+            line-height: 90px;
+        }
+
+        @include breakpoint (max-md) {
+            font-size: 45px;
+            line-height: 74px;
+        }
+
+        @include breakpoint (max-sm) {
+            font-size: 40px;
+            line-height: 64px;
+        }
+
+        @include breakpoint (max-xs) {
+            font-size: 35px;
+            line-height: 60px;
+        }
+
+        @include breakpoint (max-xsmall) {
+            font-size: 30px;
+            line-height: 56px;
+        }
+
+        @include breakpoint (max-xxsmall) {
+            font-size: 26px;
+            line-height: 45px;
+
+        }
+
+    }
+
+    &-content {
+        position: relative;
+
+        &__title {
+            color: $theme-color1;
+            font-family: $title-font;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 60px;
+            text-transform: uppercase;
+            padding-bottom: 54px;
+
+            @include breakpoint (max-xxl) {
+                font-size: 50px;
+            }
+
+            @include breakpoint (max-xl) {
+                color: $white-color;
+            }
+
+            @include breakpoint (max-xl) {
+                font-size: 45px;
+            }
+
+            @include breakpoint (max-md) {
+                font-size: 40px;
+            }
+
+            @include breakpoint (max-sm) {
+                font-size: 35px;
+            }
+
+            @include breakpoint (max-xs) {
+                font-size: 32px;
+                padding-bottom: 25px;
+            }
+
+            @include breakpoint (max-xsmall) {
+                font-size: 28px;
+                padding-bottom: 20px;
+            }
+
+            @include breakpoint (max-xxsmall) {
+                font-size: 22px;
+                padding-bottom: 25px;
+            }
+        }
+
+        &-list {
+            position: relative;
+            padding: 34px 0;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid $theme-color1;
+
+            &:last-child {
+                border-bottom: 1px solid $theme-color1;
+            }
+
+            @include breakpoint (max-xs) {
+                padding: 15px 0;
+            }
+
+            &__name {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                color: $theme-color1;
+                font-family: $body-font;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+
+                @include breakpoint (max-xl) {
+                    color: $white-color;
+                }
+
+                @include breakpoint (max-sm) {
+                    font-size: 22px;
+                    gap: 30px;
+                }
+
+                @include breakpoint (max-xs) {
+                    font-size: 20px;
+                    gap: 7px;
+                }
+
+                @include breakpoint (max-xsmall) {
+                    font-size: 18px;
+                    gap: 0px;
+                }
+
+                span {
+                    color: $theme-color1;
+                    font-family: $body-font;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 30px;
+                    padding-right: 10px;
+                    min-width: 30px;
+                    text-align: center;
+
+                    @include breakpoint (max-xl) {
+                        color: $white-color;
+                    }
+                }
+            }
+
+            &__date {
+                color: $theme-color1;
+                text-align: right;
+                font-family: $body-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 30px;
+
+                @include breakpoint (max-xl) {
+                    color: $white-color;
+                }
+
+                @include breakpoint (max-xsmall) {
+                    font-size: 16px;
+                }
+
+                @include breakpoint (max-xxsmall) {
+                    font-size: 18px;
+                }
+            }
+
+            &__thumb2 {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                z-index: 9;
+                opacity: 0;
+                visibility: hidden;
+                @include transition;
+
+                @include breakpoint (max-sm) {
+                    bottom: -20px;
+
+                    img {
+                        width: 90%;
+                    }
+                }
+
+                @include breakpoint (max-xs) {
+                    img {
+                        width: 70%;
+                    }
+                }
+
+                @include breakpoint (max-xxsmall) {
+                    bottom: -14px;
+                    right: 17%;
+                    left: 36%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:hover {
+                .award1 {
+                    &-content {
+                        &-list {
+                            &__thumb2 {
+                                opacity: 1;
+                                visibility: visible;
+                                @include transition;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

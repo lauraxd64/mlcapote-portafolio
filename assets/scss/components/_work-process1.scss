@@ -1,0 +1,93 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.work-process1 {
+    overflow: hidden;
+    &-card {
+        padding: 60px;
+        border-radius: 10px;
+        background: $white-color2;
+        display: flex;
+        align-items: flex-start;
+        gap: 90px;
+        position: relative;
+
+        @include breakpoint (max-xxl) {
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        &__number {
+            color: $black-color;
+            font-family: $title-font;
+            font-size: 140px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 140px; 
+            position: absolute;
+            transform: rotate(-90deg);
+
+            @include breakpoint (max-xxl) {
+               position: relative;
+               font-size: 80px;
+               line-height: 1.4;
+            }
+    
+        }
+
+        &-content {
+            margin-left: 230px;
+            max-width: 426px;
+
+            
+            @include breakpoint (max-xxl) {
+               margin-left: 0;
+             }
+
+
+            &__step {
+                color: $theme-color1;
+                font-family: $body-font;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 30px;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+                text-align: start;
+            }
+
+            &__title {
+                color: $black-color;
+                font-family: $title-font;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 70px;
+                margin-bottom: 30px;
+                text-align: start;
+
+                
+            @include breakpoint (max-xxxl) {
+                font-size: 40px;
+                line-height: 1;
+             }
+            }
+
+            &__text {
+                color: $text-color1;
+                font-family: $body-font;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                text-align: start;
+
+                @include breakpoint (max-xxl) {
+                    font-size: 16px; 
+                    line-height: 1.4;
+                 }
+            }
+        }
+    }
+}

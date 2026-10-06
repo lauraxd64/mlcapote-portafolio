@@ -1,0 +1,204 @@
+@use '../root/variables' as *;
+@use '../root/mixins' as *;
+
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+
+body {
+    font-family: $title-font;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    color: $text-color1;
+    background-color: $theme-color1;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+input:focus {
+    color: $text-color1;
+    outline: none;
+}
+
+input {
+    &::placeholder {
+        color: #767771;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font;
+    margin: 0px;
+    padding: 0;
+    @include transition;
+}
+
+h1 {
+    color: $white-color;
+    font-family: $title-font;
+    font-size: 216px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 216px;
+    text-transform: uppercase;
+
+    @include breakpoint(max-xxl) {
+        font-size: 150px;
+    }
+
+    @include breakpoint(max-md) {
+        font-size: 120px;
+    }
+}
+
+h2 {
+    color: $white-color;
+    font-family: $title-font;
+    font-size: 140px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140px;
+    text-transform: uppercase;
+
+    @media (max-width: 1500px) {
+        font-size: 110px;
+        line-height: 1;
+    }
+
+    @include breakpoint(max-xxl) {
+        font-size: 90px;
+        line-height: 120px;
+    }
+
+    @include breakpoint(max-md) {
+        font-size: 70px;
+        line-height: 90px;
+    }
+
+    @include breakpoint(max-sm) {
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+h3 {
+    color: $white-color;
+    text-align: right;
+    font-family: $title-font;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110px;
+    text-transform: uppercase;
+
+    @include breakpoint(max-xl) {
+        font-size: 80px;
+    }
+
+    @include breakpoint (max-md) {
+        font-size: 70px;
+    }
+}
+
+h4 {
+    color: $white-color;
+    font-family: $title-font;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 70px;
+
+    @include breakpoint(max-xxl) {
+        font-size: 40px;
+    }
+}
+
+h5 {
+    color: $white-color;
+    text-align: center;
+    font-family: $title-font;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 46px;
+}
+
+h6 {
+    color: $white-color;
+    font-family: $title-font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+
+    @media (max-width: 1500px) {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+}
+
+
+a {
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    color: $black-color;
+    @include transition;
+
+    &:hover {
+        color: $theme-color2;
+    }
+}
+
+/*button {
+    &-a {
+        text-decoration: none;
+        outline: none !important;
+        cursor: pointer;
+        color: $white-color;
+        @include transition;
+
+        &:hover {
+            color: $theme-color2;
+        }
+    }
+}*/
+
+p {
+    margin: 0px;
+    @include transition;
+    color: $white-color;
+    text-align: center;
+    font-family: $title-font;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+span {
+    margin: 0px;
+    @include transition;
+}

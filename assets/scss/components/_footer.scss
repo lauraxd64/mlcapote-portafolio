@@ -1,0 +1,287 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+/*----------------------------------------------
+    # Footer style here
+----------------------------------------------*/
+
+.footer1 {
+  position: relative;
+  overflow: hidden;
+  &__shape1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+  &-content {
+    position: relative;
+    z-index: 5;
+    padding: 0 64px; 
+    padding-bottom: 76px;
+    @include breakpoint (max-xl3) {
+      padding: 0 0 76px;
+    }
+    &__title1 {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 40px;
+      padding-bottom: 13px;
+
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 216px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 216px;
+      text-transform: uppercase;
+
+      img {
+        border-radius: 50%;
+      }
+
+      @include breakpoint (max-xl) {
+        flex-direction: column;
+      }
+
+      font-size: 216px;
+      @include breakpoint (max-xl3) {
+        font-size: 180px;
+      }
+
+      @include breakpoint (max-xxl) {
+        font-size: 135px;
+        line-height: 190px;
+      }
+      @include breakpoint (max-xl) {
+        font-size: 120px;
+        line-height: 150px;
+      }
+      @include breakpoint (max-lg) {
+        font-size: 90px;
+        line-height: 120px;
+      }
+      @include breakpoint (max-md) {
+        font-size: 58px;
+        line-height: 80px;
+      }
+      @include breakpoint (max-xs) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      img {
+        @include breakpoint (max-xl) {
+          width: 15%;
+          height: 15%;
+        }
+        @include breakpoint (max-xs) {
+          width: 20%;
+          height: 20%;
+        }
+        @include breakpoint (max-xxsmall) {
+          width: 30%;
+          height: 30%;
+        }
+      } 
+    }
+    &__title2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 216px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 216px;
+      text-transform: uppercase;
+
+      @include breakpoint (max-xs) {
+        flex-direction: column;
+      } 
+
+      font-size: 216px;
+      @include breakpoint (max-xl3) {
+        font-size: 180px;
+      }
+      @include breakpoint (max-xxl) {
+        font-size: 135px;
+        line-height: 190px;
+      }
+      @include breakpoint (max-xl) {
+        font-size: 120px;
+        line-height: 150px;
+      }
+      @include breakpoint (max-lg) {
+        font-size: 90px;
+        line-height: 120px;
+      }
+      @include breakpoint (max-md) {
+        font-size: 58px;
+        line-height: 80px;
+      }
+      @include breakpoint (max-xs) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+    &-socialBtn {
+      position: absolute;
+      left: 0px;
+      bottom: -60%;
+      width: 100%;
+      height: 100%;
+      z-index: 8;
+      display: flex;
+      align-items: center; 
+      overflow: visible;
+      justify-content: center;
+      gap: 19px;
+      @include breakpoint (max-lg) { 
+        height: 80%;
+      }
+      @include breakpoint (max-md) {
+        flex-wrap: wrap;
+        gap: 10px;
+        bottom: -40%;
+        height: 50%;
+      }
+      @include breakpoint (max-xxsmall) {
+        gap: 15px;
+      }
+      &__item {
+        position: relative;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;  
+        text-transform: uppercase;
+        border-radius: 66px;
+        border: 1px solid #FFFBF5;
+        background: rgba(255, 251, 245, 0.00);
+        display: inline-flex;
+        padding: 20px 41px;
+        align-items: center;
+        gap: 15px;
+        @include breakpoint (max-xxl) {
+          font-size: 20px;
+        }
+        @include breakpoint (max-xl) {
+          font-size: 20px;
+          padding: 15px 20px;
+        }
+        @include breakpoint (max-lg) {
+          font-size: 15px;
+          padding: 7px 14px;
+          gap: 11px;
+        }
+
+        &:nth-child(odd) {
+          transform: rotate(-10deg);
+        }
+    
+        &:nth-child(even) {
+          transform: rotate(10deg);
+        }
+        a {
+          color: #FFF;
+          &:hover {
+            color: $theme-color2;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 35px 0;
+    margin-top: 240px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+
+    @include breakpoint (max-xxl){
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 150px;
+    }
+    @include breakpoint (max-lg){
+      margin-top: 250px;
+    }
+    &-item {
+      color: $white-color;
+      font-family: $body-font;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px; 
+      text-transform: uppercase;
+
+      @include breakpoint (max-xl) { 
+        font-size: 12px;  
+    }
+
+      &__menu{
+        padding-bottom: 5px;
+        @include breakpoint (lg){
+          padding-bottom: 0px;
+        }  
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            display: inline-block;
+            margin-right: 12px;
+            line-height: 1;
+            position: relative;
+            @include breakpoint (md){
+              margin-right: 38px;              
+            }
+  
+            a {
+              display: inline-block;
+              color: $white-color;
+              font-family: $body-font;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 28px;
+              text-transform: uppercase;
+
+              @include breakpoint (max-xl) { 
+                font-size: 12px;  
+            }
+
+
+              i {
+                  margin-left: 8px;
+              }
+              &:hover {
+                color: $theme-color2;
+              }
+            }               
+          }  
+        }
+        
+      }
+    }
+  }
+
+}
+
+ 

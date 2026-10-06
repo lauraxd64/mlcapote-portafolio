@@ -1,0 +1,141 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.pricing1 {
+    &-card {
+        position: relative;
+        padding: 45px 35px;
+        border-radius: 15px;
+        border: 1px dashed $theme-color2;
+        background-color: $white-color2;
+        overflow: hidden;
+
+        &__badge {
+            position: absolute;
+            top: 2.8%;
+            right: -3.5%;
+            background-color: $theme-color2;
+            padding: 3px 15px;
+            color: $white-color;
+            font-family: $body-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            transform: rotate(-90deg);
+        }
+
+        &__badge2 {
+            position: absolute;
+            top: 3.5%;
+            right: -8%;
+            background-color: $theme-color2;
+            padding: 3px 15px;
+            color: #FFF;
+            font-family: $body-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            transform: rotate(-90deg);
+        }
+
+        &__title {
+            color: $theme-color1;
+            font-family: $title-font;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            margin-bottom: 30px;
+        }
+
+        &__desc {
+            color: $text-color1;
+            font-family: $body-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 45px;
+        }
+
+        &__price {
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid $border-color2;
+            background: $bg-color1;
+            margin-bottom: 45px;
+
+            &-title {
+                color: #000;
+                font-family: $body-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 26px;
+                /* 162.5% */
+                text-transform: uppercase;
+            }
+
+            &-value {
+                color: #000;
+                font-family: "Plus Jakarta Sans";
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 70px;
+                /* 116.667% */
+                text-transform: uppercase;
+            }
+
+            &-feature {
+                list-style-type: square;
+                margin-left: 25px;
+
+                li {
+                    color: #000;
+                    font-family: $body-font;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 26px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+
+
+        &__button {
+            padding: 23px;
+            border-radius: 66px;
+            background: #0B0C0F;
+            color: #FFF;
+            font-family: $body-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        &__button2 {
+            padding: 23px;
+            border-radius: 66px;
+            background: $theme-color2;
+            color: #FFF;
+            font-family: $body-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+}

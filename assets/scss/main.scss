@@ -1,0 +1,117 @@
+/*-----------------------------------------------------------------
+Theme Name: Aliyo
+Author: themewolfs
+Author URI: https://themeforest.net/user/themewolfs
+Version: 1.0.0 
+Description: Aliyo - Personal Portfolio/CV Html Template
+-------------------------------------------------------------------
+ CSS TABLE OF CONTENTS
+------------------------------------------------------------------- 
+1. Common
+2. Header
+3. Hero
+4. Video
+5. Brand
+6. About
+7. Meanmenu
+8. Title
+9. Service
+10. Project
+11. Testimonial
+12. Contact
+13. Blog
+14. Pricing
+15. WCU
+16. Team
+17. FAQ
+18. Work Process
+19. Error
+20. Footer
+------------------------------------------------------------------*/
+
+//====== Components Start ======//
+
+/* 1. Common */
+@use "./components/common/counter-box";
+@use "./components/common/slider-button"; 
+@use "./components/common/progress-bar";   
+@use "./components/common/marquee";   
+@use "./components/common/video";    
+@use "./components/common/sidemenu";   
+@use "./components/common/pagination";   
+@use "./components/common/breadcumb1";  
+@use "./components/common/gsap";  
+
+/* 2. Header */
+@use "./components/header";
+@use "./components/header2";
+
+/* 3. Hero */
+@use "./components/hero";
+@use "./components/hero2";
+@use "./components/hero3";
+
+/* 4. Video */ 
+@use "./components/video1"; 
+
+/* 5. Brand */
+@use "./components/brand1";
+@use "./components/brand2";
+
+/* 6. About */
+@use "./components/about";
+@use "./components/about2";
+
+/* 7. Meanmenu */
+@use "./components/meanmenu";
+  
+/* 8. Title */
+@use "./components/title";
+
+/* 9. Service */
+@use "./components/service1";
+@use "./components/service2";
+@use "./components/service-page";
+
+/* 10. Project */
+@use "./components/project";
+@use "./components/project2";
+@use "./components/project-details";
+
+/* 11. Testimonial */
+@use "./components/testimonial";
+@use "./components/testimonial2";
+
+/* 12. Contact */
+@use "./components/contact-form1";
+@use "./components/comment-form1"; 
+
+/* 13. Blog */
+@use "./components/blog1";
+@use "./components/blog-details";
+
+/* 14. Pricing */
+@use "./components/pricing1";
+
+/* 15. WCU */
+@use "./components/award";
+
+/* 16. Team */
+@use "./components/team1";
+
+/* 17. FAQ */
+@use "./components/faq1";
+
+/* 18. Work Process */
+@use "./components/work-process1";
+
+/* 19. Error */
+@use "./components/error";
+
+/* 20. Footer */
+@use "./components/footer";
+@use "./components/footer2";
+
+/*====== Components End ======*/
+
+//====== Template Section Style End ======//

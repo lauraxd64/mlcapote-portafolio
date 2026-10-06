@@ -1,0 +1,137 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+.progress-wrap {
+
+	width: 100%;
+
+	&:not(:last-child) {
+		padding-bottom: 27px;
+	}
+
+	.progress-meta {
+		display: flex;
+		justify-content: space-between;
+		max-width: 430px;
+		padding-bottom: 10px;
+
+		@include breakpoint (xs) {
+			max-width: 470px;
+		}
+
+		@include breakpoint (md) {
+			max-width: 575px;
+		}
+
+		@include breakpoint (lg) {
+			max-width: 415px;
+		}
+
+		@include breakpoint (xxl) {
+			max-width: 480px;
+		}
+
+		.title {
+			color: $white-color;
+			font-family: $title-font;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 20px;
+			letter-spacing: -0.36px; 
+		}
+
+		.title2 {
+			color: $black-color;
+			font-family: $title-font;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 20px;
+			letter-spacing: -0.36px; 
+		}
+
+		.percentage {
+			color: $white-color;
+			font-family: $title-font;
+			text-align: right;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 28px;
+		}
+
+		.percentage2 {
+			color: $black-color;
+			font-family: $title-font;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 20px;
+			letter-spacing: -0.36px; 
+		}
+
+		&.mxw-424 {
+			max-width: 375px;
+
+			@include breakpoint (xs) {
+				max-width: 420px;
+			}
+
+			@include breakpoint (md) {
+				max-width: 510px;
+			}
+
+			@include breakpoint (lg) {
+				max-width: 370px;
+			}
+
+			@include breakpoint (xxl) {
+				max-width: 424px;
+			}
+		}
+
+		&.mxw-375 {
+			max-width: 340px;
+
+			@include breakpoint (xs) {
+				max-width: 370px;
+			}
+
+			@include breakpoint (md) {
+				max-width: 450px;
+			}
+
+			@include breakpoint (lg) {
+				max-width: 325px;
+			}
+
+			@include breakpoint (xxl) {
+				max-width: 375px;
+			}
+		}
+	}
+
+	.progress-container {
+		position: relative;
+		width: 100%;
+		height: 10px;
+		border-radius: 2px;
+		background: $border-color2;
+		overflow: visible;
+
+		.progress-bar {
+			height: 10px;
+			border-radius: 2px;
+			background: $blue-color;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			white-space: nowrap;
+			z-index: 1;
+
+		}
+	}
+}

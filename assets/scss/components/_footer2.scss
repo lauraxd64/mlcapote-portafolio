@@ -1,0 +1,147 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+/*----------------------------------------------
+    # Footer style here
+----------------------------------------------*/
+
+.footer2 {
+  position: relative;
+  overflow: hidden;
+
+  &-cta-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 29px;
+    margin-right: 275px;
+
+    @include breakpoint (max-xxxl) {
+      flex-wrap: wrap;
+      margin-right: 30px;
+  }
+
+    &__one {
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 140px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 140px;
+      text-transform: uppercase;
+
+      @include breakpoint (max-xxl) {
+        font-size: 50px;
+        line-height: 1.3; 
+      }
+
+
+      &-thumb {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+
+  }
+
+  &-cta-text__two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 29px;
+    margin-top: 20px;
+    margin-left: 180px;
+
+    @include breakpoint (max-xxxl) {
+      flex-wrap: wrap;
+      margin-left: 30px;
+      margin-top: 35px;
+  }
+
+    &-email {
+      padding: 20px 40px;
+      border-radius: 66px;
+      background-color: $bg-color1;
+      color: $theme-color1;
+      font-family: $body-font;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+
+      @include breakpoint (max-xl) {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+
+    &-text {
+      color: rgba(255, 255, 255, 0.00);
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: $white-color;
+      font-family: $title-font;
+      font-size: 140px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 140px;
+      text-transform: uppercase;
+
+      @include breakpoint (max-xl) {
+        font-size: 50px;
+      }
+
+    }
+  }
+
+  &-bottom {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+
+    @include breakpoint (max-lg) {
+      flex-wrap: wrap; 
+      justify-content: center;
+      gap: 10px;
+  }
+    &__item {
+      color: $white-color;
+      font-family: $body-font;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+
+      @include breakpoint (max-md) {
+        font-size: 14px;
+        line-height: 1.3;
+      }
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a {
+          color: $white-color;
+          font-family: $body-font;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px;
+
+          @include breakpoint (max-md) {
+            font-size: 14px;
+            line-height: 1.3;
+          }
+    
+        }
+      }
+    }
+  }
+}

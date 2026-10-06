@@ -1,0 +1,46 @@
+/*----------------------------------------------
+    # All Variables here
+----------------------------------------------*/
+:root {
+    
+    --theme-color1: #0B0C0F;
+    --theme-color2: #F52A03;
+    --gradient-color: linear-gradient(90deg, #F52A03 0%, #FF8932 100%); 
+    --bg-color1: #FFFF00;
+    --white: #ffffff; 
+    --white2: #FFFBF5; 
+    --black: #000000;    
+    --black2: #1A1919;    
+    --blue: #883EFF;    
+    --text-color1: #666666; 
+    --text-color2: #999999; 
+    --border-color1: #1F1F1F; 
+    --border-color2: rgba(255, 255, 255, 0.10); 
+
+    --icon-font: "Font Awesome 6 Pro";
+    --title-font: "Plus Jakarta Sans", serif;
+    --body-font: "Manrope", sans-serif;
+    --icon-font: "Font Awesome 6 Pro";
+}
+
+// Theme Color - Defualt Colors 
+$theme-color1: var( --theme-color1);
+$theme-color2: var( --theme-color2); 
+$gradient-color: var( --gradient-color); 
+$bg-color1: var(--bg-color1); 
+$text-color1: var(--text-color1); 
+$text-color2: var(--text-color2); 
+$border-color1: var(--border-color1); 
+$border-color2: var(--border-color2); 
+
+$white-color: var(--white); 
+$white-color2: var(--white2); 
+$black-color: var(--black); 
+$black-color2: var(--black2); 
+$blue-color: var(--blue); 
+
+// Font Variation
+$icon-font : var(--icon-font);
+$title-font: var(--title-font); 
+$body-font: var(--body-font);  
+$fa: var(--icon-font);

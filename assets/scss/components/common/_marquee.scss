@@ -1,0 +1,352 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+.marquee-wrapper {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	background: $theme-color1;
+	z-index: 9;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+	height: 456px;
+	padding-top: 118px;
+
+
+
+	&.style1 {
+		height: 456px;
+		padding-top: 118px;
+		padding-bottom: 118px;
+
+		@include breakpoint (max-lg) {
+			height: 210px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		@include breakpoint (max-md) {
+			height: 210px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&.style3 {
+		height: 113px;
+		padding-top: 0px;
+		border-bottom: 0;
+		background-color: $black-color;
+	}
+
+	&.style4 {
+		padding: 30px 0;
+		height: 130px;
+		border-bottom: 0;
+		background-color: $bg-color1;
+
+		.marquee-item {
+			display: inline-flex;
+			align-items: center;
+
+			&__one {
+				color: $black-color;
+				font-family: $title-font;
+				font-size: 60px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 70px;
+
+				display: inline-flex;
+				align-items: center;
+				gap: 15px;
+			}
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		height: 350px;
+		padding-top: 68px;
+	}
+
+	@include breakpoint (max-md) {
+		height: 280px;
+		padding-top: 35px;
+	}
+
+	.text-slider {
+		img {
+			border-radius: 10px;
+			margin-bottom: 42px;
+			margin-right: 10px;
+			margin-left: 21px;
+
+			@include breakpoint (max-xxl) {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+.marquee-inner {
+	position: absolute;
+	display: inline-flex;
+	width: 200%;
+}
+
+.marquee-list {
+	float: left;
+	width: 50%;
+}
+
+.marquee-item {
+	float: left;
+	transition: animation 0.2s ease-out;
+
+	&.style-1 {
+		.text-slider {
+			color: $white-color;
+			font-family: $title-font;
+			font-size: 216px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 216px;
+			text-transform: uppercase;
+			padding-right: 40px;
+
+
+			@include breakpoint(max-xxl) {
+				font-size: 150px;
+			}
+
+			@include breakpoint(max-lg) {
+				font-size: 50px;
+				line-height: 1;
+			}
+
+			&.bg {
+				background: linear-gradient(0deg, #FF8932 9.26%, #F52A03 79.63%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+		.text-style {
+			@include transition;
+			background-image: linear-gradient($text-color1, $text-color1);
+			background-position: 0 95%;
+			background-repeat: no-repeat;
+			background-size: 0% 2px;
+			padding-right: 27px;
+
+			&:hover { 
+				background-size: 100% 3px;
+				opacity: 0.7;
+				background: linear-gradient(0deg, #FF8932 9.26%, #F52A03 78.7%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
+
+.marquee-inner.to-left {
+	animation: marqueeLeft 25s linear infinite;
+}
+
+@keyframes marqueeLeft {
+	0% {
+		left: 0;
+	}
+
+	100% {
+		left: -100%;
+	}
+}
+
+.marquee-inner.to-right {
+	animation: marqueeRight 25s linear infinite;
+}
+
+@keyframes marqueeRight {
+	0% {
+		right: 0;
+	}
+
+	100% {
+		right: -100%;
+	}
+}
+
+
+
+
+
+
+
+.marquee-box2 {
+	height: 380px;
+	padding: 120px 0 120px; 
+	position: relative;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: -40%;
+		left: 0;
+		background: $black-color;
+
+	}
+
+	@include breakpoint (max-md) { 
+		padding: 240px 0;
+		height: 168px;
+	}
+
+	@include breakpoint (max-sm) {
+		padding: 147px 0;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 15px;
+		width: 310px;
+		height: 310px;
+		border-radius: 310px;
+		border: 1px solid $border-color1;
+		background: $white-color2;
+		color: $theme-color1;
+		font-family: $title-font;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 30px;
+		text-transform: uppercase;
+		z-index: 8;
+
+		@include breakpoint (max-xl) {
+			width: 190px;
+			height: 190px;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+
+		@include breakpoint (max-md) {
+			margin-top: -30px;
+		}
+
+		@include breakpoint (max-sm) {
+			width: 148px;
+			height: 148px; 
+		}
+	}
+
+	.marquee-wrapper {
+		padding-top: 0 !important;
+
+		&.style2 {
+			transform: rotate(-7deg);
+			height: 140px;
+			z-index: 5;
+			margin-left: -5%;
+			margin-right: -5%;
+			overflow: hidden;
+
+			@include breakpoint (max-md) {
+				height: 80px;
+				transform: rotate(-17deg);
+				margin-left: -90%;
+				margin-right: -10%;
+			}
+
+			@include breakpoint (max-xs) { 
+				transform: rotate(-21deg); 
+			}
+
+			.marquee-wrapper {
+				&__text {
+					color: $white-color;
+					font-family: $title-font;
+					font-size: 60px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 70px;
+					text-transform: uppercase;
+
+					@include breakpoint (max-md) {
+						font-size: 30px;
+					}
+				}
+			}
+
+			.marquee-item {
+				background-color: $theme-color2;
+				padding: 35px 0;
+
+				@include breakpoint (max-md) {
+					padding: 6px;
+				}
+			}
+		}
+
+		&.style3 {
+			height: 140px;
+			transform: rotate(7deg);
+			z-index: 1;
+			margin-top: -140px;
+			margin-left: -5%;
+			margin-right: -5%;
+			overflow: hidden;
+
+			@include breakpoint (max-md) {
+				height: 80px;
+				transform: rotate(15.5deg);
+				margin-left: -10%;
+				margin-right: -10%;
+			}
+			@include breakpoint (max-xs) { 
+				transform: rotate(21deg); 
+			}
+			.marquee-wrapper {
+				&__text {
+					color: $black-color;
+					font-family: $title-font;
+					font-size: 60px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 70px;
+					text-transform: uppercase;
+
+					@include breakpoint (max-md) {
+						font-size: 30px;
+					}
+				}
+			}
+
+
+			.marquee-item {
+				background-color: $bg-color1;
+				padding: 35px 0;
+
+				@include breakpoint (max-md) {
+					padding: 6px;
+				}
+			}
+		}
+	}
+
+}

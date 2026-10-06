@@ -1,0 +1,59 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+/*----------------------------------------------
+    # Title style here
+----------------------------------------------*/
+ .section-top {
+    position: relative;
+    z-index: 9;
+    text-align: center;
+
+
+    &__title1 {
+        color: $theme-color1;
+        text-align: start;
+        padding-top: 127px;
+        @include breakpoint (max-lg) {
+            padding-top: 70px;
+        }
+    }
+
+    &__title2 {
+        color: $theme-color1;
+        text-align: end;
+        font-weight: 400;
+        padding-top: 20px;
+        padding-right: 150px;
+        @include breakpoint (max-lg) {
+            padding-right: 0px;
+        }
+    }
+
+    &__title3 {
+        color: $theme-color1;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+
+    &__title4 {
+        color: rgba(255, 255, 255, 0.00); 
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: $theme-color1; 
+        text-align: end; 
+    }
+
+    &__title5 {
+        color: $white-color;
+        text-align: start;     
+        margin-bottom: 20px; 
+    }
+
+    &__title6 {
+        color: rgba(255, 255, 255, 0.00);
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: $white-color; 
+        text-align: end; 
+    }
+ }

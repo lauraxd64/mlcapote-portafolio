@@ -1,0 +1,21 @@
+(function ($) {
+    "use strict";
+    var windowOn = $(window);
+ 
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll(".odometer").forEach((el) => {
+      const count = el.getAttribute("data-count");
+    
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 90%",
+        once: true,
+        onEnter: () => {
+          el.innerHTML = count;
+        },
+      });
+    });
+    
+
+})(jQuery);

@@ -1,0 +1,66 @@
+@use '../../root' as *;
+@use '../../utilities' as *;
+
+
+/* Style the pagination container */
+.slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 48px;
+    padding-bottom: 5px;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: $black-color;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $theme-color1;
+    border: 4px solid $white-color;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 2px $theme-color1;
+}
+
+// Pagination with Number
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 60px;
+
+    a {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black-color;
+        border-radius: 50%;
+        color: $white-color;
+        font-family: $body-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px; 
+        @include transition;
+
+        &:hover,
+        &.active {
+            background-color: $bg-color1;
+            color: $black-color;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.contact-form1 {
+    position: relative;
+    z-index: 5;
+    padding: 90px 60px;
+    border-radius: 10px 0px 0px 10px;
+    background: $white-color2;
+
+    &__title {
+        color: $theme-color1;
+        font-family: $body-font;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46px;
+        margin-bottom: 60px;
+    }
+
+    input {
+        padding: 10px 0;
+        width: 100%;
+        margin-bottom: 90px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $theme-color1;
+        background-color: transparent;
+
+
+        &::placeholder {
+            color: $theme-color1;
+            font-family: $body-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+
+    button {
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    &-thumb {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint (max-xxl) {
+            mask-image: none!important;
+        }
+
+        img {
+            width: 110%;
+            height: 100%;
+            border-radius: 0px 10px 10px 0px;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.contact-info {
+    background: $bg-color1;
+    margin-top: 55px;
+
+    &__text {
+        padding: 35px 0px;
+        color: $theme-color1;
+        font-family: $title-font;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46px;
+
+        @include breakpoint (max-lg) {
+            font-size: 25px;
+            line-height: 1.4;
+         }
+    }
+}
+
+
+.contact-content {
+    position: relative;
+    height: 100%;
+}
+
+.contact-social {
+    position: absolute;
+    z-index: 5;
+    top: 45%;
+    right: 0;
+    transform: translateY(-45%);
+    display: inline-block;
+    padding: 25px;
+    border-radius: 10px 0px 0px 10px;
+    background: $white-color2; 
+    border-left: 30px solid $black-color;
+    border-top: 30px solid $black-color;
+    border-bottom: 30px solid $black-color;
+
+    @include breakpoint (max-xxxl) {
+        border: none;
+    }
+
+    @include breakpoint (max-lg) {
+       padding: 8px 20px; 
+    }
+
+    @include breakpoint (max-md) { 
+        top: 98%;
+       transform: translateY(-98%);
+       border-radius: 10px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include breakpoint (max-md) {
+           flex-direction: row;
+        }
+
+        a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white-color;
+            border: 1px solid $border-color1;
+            border-radius: 50%;
+
+            @include breakpoint (max-lg) {
+                width: 30px;
+                height: 30px;
+            }
+
+            &:hover {
+                background: $theme-color2;
+                color: $white-color;
+                border: 1px solid $theme-color2;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         margin-top: 60px;
+         padding-bottom: 100px;
+
+         @include breakpoint (max-lg) {
+            margin-top: 20px;
+            padding-bottom: 80px;
+         }
+
+         @include breakpoint (max-md) {
+            padding-bottom: 5px;
+         }
+         
+         svg {
+            @include breakpoint (max-md) {
+               position: absolute;
+               transform: rotate(90deg);
+             }
+         }
+
+        &-text {
+            position: absolute;
+            color: $theme-color1;
+            font-family: $body-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;  
+            transform: rotate(-90deg);
+            bottom: 25px;
+            left: -15px;
+
+            @include breakpoint (max-lg) {
+                font-size: 14px;
+                left: -10px; 
+                bottom: 15px;
+             }
+
+             @include breakpoint (max-md) {
+               position: relative;
+               transform: rotate(0deg); 
+               left: -5px;
+             }
+        }
+ 
+    }
+
+}

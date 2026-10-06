@@ -1,0 +1,174 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.hero2 {
+    position: relative;
+
+    &__shape {
+        position: absolute;
+        top: 36%;
+        right: 4%;
+        z-index: 1;
+
+        @include breakpoint (max-xxxl) {
+            opacity: 0.3;
+        }
+    }
+
+    &-title {
+        margin-top: 130px;
+
+        &__one {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            &-text {
+                color: $white-color;
+                font-family: $title-font;
+                font-size: 216px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 216px;
+
+                @media (max-width: 1500px) {
+                    font-size: 120px;
+                    line-height: 1;
+                }
+
+                @include breakpoint (max-xl) {
+                    font-size: 50px;
+                    line-height: 1;
+                }
+            }
+
+            &-circle {
+                position: relative; 
+            }
+
+            &-name {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                max-width: 100px; 
+                color: $theme-color1;
+                font-family: $title-font;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px; 
+                text-transform: uppercase;
+                transform: translate(-50%,-50%);
+
+                @include breakpoint (max-xl) {
+                    font-size: 16px;
+                    line-height: 1;
+                }
+            }
+
+        }
+
+        &__two {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 17px;
+
+            @include breakpoint (max-lg) {
+                flex-wrap: wrap;
+            }
+
+            &-tag {
+                padding: 20px 40px;
+                color: $theme-color1;
+                font-family: $body-font;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+                text-transform: uppercase;
+                background-color: $bg-color1;
+                border-radius: 66px;
+                transform: rotate(-35deg);
+
+                @media (max-width: 1500px) {
+                    font-size: 18px;
+                    line-height: 1;
+                }
+
+                @include breakpoint (max-lg) {
+                    transform: rotate(-5deg);
+                }
+            }
+
+            &-text {
+                color: $white-color;
+                font-family: $title-font;
+                font-size: 216px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 216px;
+
+                @media (max-width: 1500px) {
+                    font-size: 120px;
+                    line-height: 1;
+                }
+
+                @include breakpoint (max-xl) {
+                    font-size: 50px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+
+    &-desc {
+        color: $white-color;
+        text-align: center;
+        font-family: $title-font;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 46px;
+        max-width: 1369px;
+        margin: 60px auto 130px;
+
+
+        @media (max-width: 1500px) {
+            font-size: 30px;
+            line-height: 1.3;
+        }
+
+        @include breakpoint (max-xl) {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+
+
+
+    &-thumb {
+        position: relative;
+        z-index: 3;
+        padding: 60px;
+        border-radius: 35px 35px 0px 0px;
+        background: transparent;
+
+        @include breakpoint (max-xl) {
+            padding: 20px;
+            border-radius: 15px 15px 0px 0px;  
+            background: $white-color;
+        }
+    }
+
+    &__bottom-line {
+        position: relative;
+        z-index: 9;
+        width: 1920px;
+        height: 60px;
+        background-color: $bg-color1;
+        margin-top: -60px;
+    }
+}

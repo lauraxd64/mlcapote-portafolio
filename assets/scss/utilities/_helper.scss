@@ -1,0 +1,507 @@
+@use '../root' as *;
+
+/*----------------------------------------------
+    # Helping  style here
+----------------------------------------------*/
+//page scroll bar add
+::-webkit-scrollbar {
+	width: 10px;
+	height: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px $theme-color1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $theme-color1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+//page scroll bar add
+
+//Basic Code Start
+.fix {
+  overflow: hidden;
+}
+
+.ralt{
+ position: relative;
+}
+
+//Basic Code End
+
+//Video Css Start
+.ripple {
+  position: relative;
+
+  &::before,&::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 180px;
+      height: 180px;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 $theme-color2;
+      -webkit-animation: rippleOne 3s infinite;
+      animation: rippleOne 3s infinite;
+
+      @include breakpoint (max-xl) {
+        width: 100px;
+        height: 100px; 
+    }
+
+    @include breakpoint (max-md) {
+      width: 60px;
+      height: 60px; 
+  }
+  }
+
+  &::before {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+  }
+
+  &::after {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+  }
+}
+//Video Css End
+
+// Padding
+.section-padding {
+  padding: 80px 0;
+  @include breakpoint(lg) {
+    padding: 130px 0;
+  }
+}
+
+.project1-padding {
+  padding: 75px;
+
+  @include breakpoint(max-xl) {
+    padding: 15px;
+  }
+}
+.bor-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.bor-left {
+  border-left: 1px solid rgba(255, 255, 255, 0.10);
+}
+.bor-right {
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
+}
+.bor-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+ 
+
+@include breakpoint (lg){  
+  .fix-header {
+    padding-top: 45px;
+  }
+}
+
+// Margin
+.mt-60 {
+  margin-top: 60px;
+}
+
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+
+.mt-xl-100 {
+  @include breakpoint (xl) {
+    margin-top: 100px;  
+  }
+}
+
+.mb-xl-130 {
+  margin-bottom: 130px;  
+  @include breakpoint (xl) {
+    margin-bottom: 100px;  
+  }
+}
+
+.mb-60 {
+  margin-bottom: 60px!important;
+}
+
+.pb-30 {
+  padding-bottom: 30px !important;
+}
+.pb-32 {
+  padding-bottom: 32px !important;
+}
+.pb-38 {
+  padding-bottom: 38px !important;
+}
+
+.pb-105 {
+  padding-bottom: 105px;
+  @include breakpoint (max-xxl) {
+    padding-bottom: 70px;
+  }
+  @include breakpoint (max-xl) {
+    padding-bottom: 40px;
+  }
+  @include breakpoint (max-xxsmall) {
+    padding-bottom: 15px;
+  }
+}
+
+.pb-130 {
+  padding-bottom: 80px !important;
+  @include breakpoint (md) {
+    padding-bottom: 130px !important;
+  }
+}
+
+.pl-500 {
+  padding-left: 350px;
+  @include breakpoint (xxl) {
+    padding-left: 500px;
+  }
+}
+.pr-380 {
+  padding-right: 200px;
+  @include breakpoint (xxl) {
+    padding-right: 380px;
+  }
+}
+
+.pt-7 {
+  padding-top: 7px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-60 {
+  padding-top: 30px !important;
+  @include breakpoint (md){
+    padding-top: 60px !important;
+  }
+}
+.pt-70 {
+  padding-top: 30px;
+  @include breakpoint (md){
+    padding-top: 70px;
+  }
+}
+.pt-77 {
+  padding-top: 30px;
+  @include breakpoint (md){
+    padding-top: 77px;
+  }
+}
+.pt-128 {
+  padding-top: 25px;
+  @include breakpoint (xxl){
+    padding-top: 128px;
+  }
+}
+
+.px-80 {
+  padding: 0 80px;
+
+  @include breakpoint (max-lg) {
+    padding: 0 30px;
+  }
+}
+
+.px-140 {
+  padding: 0 140px;
+
+  @include breakpoint (max-lg) {
+    padding: 0 30px;
+}
+}
+
+// Colors
+.bg-theme {
+  background-color: $theme-color1 !important;
+}
+
+.bg-theme2 {
+  background-color: $black-color !important;
+}
+
+.bg-white2 {
+  background-color: $white-color2 !important;
+}
+  
+// Image 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-mask {
+  mask-size: cover;
+  mask-position: center;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}
+
+.truncate-text {
+  display: block;
+  max-height: 56px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5em;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.navigation-controls {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  .nav-item {
+    @include flex;
+    gap: 5px;
+    justify-content: space-between;
+    position: relative;
+
+    .icon {
+        i {               
+            font-size: 20px;
+            color: $black-color;
+        }
+    }
+    h4 {
+      color: $black-color;
+      font-family: $title-font;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; 
+      letter-spacing: -0.36px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.preview-area {
+  margin-top: 40px;
+  @include flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(38, 38, 38, 0.20);
+  padding: 40px 0 0;
+
+  .preview-item {
+      @include flex;
+      gap: 16px;
+      @include breakpoint (max-xsmall) {
+        gap: 4px;
+      }
+
+      .icon {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        border: 1px solid $black-color;
+        background: $text-color1;
+      }
+      .content {
+        p {
+          color: #262626;
+          font-family: $body-font;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px; 
+          @include breakpoint (max-md) {
+            font-size: 14px;
+          }
+        }
+        h5 {
+          font-size: 20px;
+          @include breakpoint (max-md) {
+            font-size: 16px;
+          }
+          @include breakpoint (max-xsmall) {
+            font-size: 14px;
+          }
+        }
+
+          &.text-right {
+              text-align: right;
+          }
+      }
+  }
+}
+
+// Check list
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &-item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+  }
+    &__icon {
+      padding-right: 8px;
+    }
+    &__text {
+      color: $black-color;
+      font-family: $body-font;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+}
+
+.map-container {
+  width: 100%;
+  height: 380px;
+
+  @include breakpoint (md) {
+    height: 600px;
+  }
+  @include breakpoint (xl) {
+    height: 700px;
+  }
+
+  iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  }
+}
+
+
+.map-container2 {
+  width: 100%;
+  height: 380px;
+
+  @include breakpoint (md) {
+    height: 570px;
+  }
+  @include breakpoint (xl) {
+    height: 680px;
+  }
+
+  iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  }
+}
+
+
+// Global Icon
+.global-social2 {
+  padding-top: 11px;
+  display: flex;
+  gap: 15px;
+  &__item {
+    a {
+      display: flex;
+      width: 34px;
+      height: 34px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 50px;
+      background: $white-color;
+      border: 1px solid $black-color;
+      svg {
+        path {
+          fill: $black-color;
+        }
+      }
+      i {
+        color: $black-color;
+      }
+      &:hover {
+        background: $theme-color1;
+        border: 1px solid $theme-color1;
+        svg {
+          path {
+            fill: $white-color;
+          }
+        }
+        i {
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+}
+
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+
+
+.pt-xl-30 {
+  padding-top: 0px;
+  @include breakpoint (xl) {
+    padding-top: 30px;
+  }
+} 
+
+.pb-xl-30 {
+  padding-bottom: 0px;
+  @include breakpoint (xl) {
+    padding-bottom: 30px;
+  }
+}
+
+.z-9 {
+  z-index: 9;
+}
+
+.pin-spacer {
+  overflow: hidden!important;
+}

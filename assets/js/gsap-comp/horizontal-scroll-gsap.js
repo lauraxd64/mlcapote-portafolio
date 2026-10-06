@@ -1,0 +1,29 @@
+(function ($) {
+    "use strict";
+    var windowOn = $(window);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let hs = gsap.matchMedia();
+                
+    hs.add("(min-width: 1024px)", () => {
+    
+        let gsapHorizontalScroll = document.querySelector('.gsap-horizontal-scroll');
+    if (gsapHorizontalScroll) {
+        gsap.to(gsapHorizontalScroll, {
+            x: () => -(gsapHorizontalScroll.scrollWidth - window.innerWidth),
+            scrollTrigger: {
+                trigger: gsapHorizontalScroll,
+                start: 'top 20%',
+                end: () => "+=" + gsapHorizontalScroll.scrollWidth,
+                pin: '.gsap-horizontal-scroll-wrapper',
+                scrub: 1.4,
+                invalidateOnRefresh: true
+            }
+        });
+    }
+    
+    });
+
+
+})(jQuery);

@@ -1,0 +1,317 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+
+.hero3 {
+    position: relative;
+    background: $white-color2;
+
+    @include breakpoint (max-xxxl) {
+        background: $theme-color2;
+    }
+ 
+    &-content {
+        padding-top: 236px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint (max-lg) {
+            flex-wrap: wrap;
+            padding-top: 180px;
+        }
+
+        &__title {
+            h1 {
+                color: $white-color;
+                font-family: $title-font;
+                font-size: 216px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 216px;
+                text-transform: uppercase;
+
+                @include breakpoint (max-xxxl) {
+                    font-size: 116px;
+                }
+
+                @include breakpoint (max-xxl) {
+                    font-size: 80px; 
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+
+                @include breakpoint (max-md) {
+                    font-size: 40px;  
+                }
+            }
+        }
+
+        &__thumb {
+            border-radius: 10px;
+            border: 2px dashed $white-color;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+
+        &__desc {
+            max-width: 440px;
+           
+            span {
+                padding-left: 153px;
+                color: $theme-color1;
+                font-family: $title-font;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 34px;
+                text-align: start;
+
+                @include breakpoint (max-xxxl) {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    color: $white-color;
+                }
+
+                @include breakpoint (max-md) { 
+                    color: $theme-color1;
+                }
+            }
+        }
+
+        &__title2 { 
+            color: $theme-color1;
+            font-family: $title-font;
+            font-size: 216px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 216px;
+            text-transform: uppercase;
+
+            @include breakpoint (max-xxxl) {
+                font-size: 116px;
+                color: $white-color;
+            }
+
+            @include breakpoint (max-xxl) {
+                font-size: 80px; 
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+
+            @include breakpoint (max-md) {
+                font-size: 50px;  
+                color: $theme-color1;
+            }
+        }
+
+    }
+
+    &-numbArea {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 56px;
+
+        @include breakpoint (max-xxl) {
+            flex-wrap: wrap;
+            padding-top: 150px;
+        }
+
+ 
+
+        &__btn1 {
+            position: absolute;
+            left: 28.5%;
+            top: 18%;
+            color: $theme-color1;
+            font-family: $body-font;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px; 
+            text-transform: uppercase;
+            border-radius: 66px;
+            border: 1px solid $theme-color1;
+            background: $white-color2;
+            display: inline-flex;
+            padding: 20px 47px;
+            align-items: center;
+            gap: 15px;
+            transform: rotate(-40deg);
+            flex-shrink: 0;
+
+            @include breakpoint (max-xxl) {
+                font-size: 14px; 
+                padding: 20px 20px;
+                left: 80%;
+                bottom: 95%;
+            }
+
+            a {
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+        &__btn2 {
+            position: absolute;
+            right: 0%;
+            bottom: 51%;
+            color: $theme-color1;
+            font-family: $body-font;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px; 
+            text-transform: uppercase;
+            border-radius: 66px;
+            border: 1px solid $theme-color1;
+            background: $white-color2;
+            display: inline-flex;
+            padding: 20px 47px;
+            align-items: center;
+            gap: 15px;
+            transform: rotate(-40deg);
+            flex-shrink: 0;
+
+            @include breakpoint (max-xxl) {
+                font-size: 14px; 
+                padding: 20px 20px;
+                right: 0%;
+                bottom: 55%;
+            }
+
+            a {
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            gap: 117px;
+
+            @include breakpoint (max-xxxl) {
+                padding-top: 100px;
+            }
+
+            @include breakpoint (max-xxl) {
+                padding-right: 0px;
+                justify-content: center;
+            }
+
+            @include breakpoint (max-lg) {
+                flex-wrap: wrap;
+            }
+    
+
+            @include breakpoint (max-lg) {
+                padding-top: 50px;
+                gap: 40px;
+            }
+
+            &-numb {  
+                h2 {
+                    color: $theme-color1;
+                    font-family: $title-font;
+                    font-size: 416px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 216px;
+                    text-transform: uppercase; 
+    
+                    @include breakpoint (max-lg) {
+                        font-size: 216px; 
+                        line-height: 1;
+                    }
+    
+                    @include breakpoint (max-md) {
+                        font-size: 110px; 
+                        line-height: 1;
+                    }
+
+
+                    @include breakpoint (max-sm) {
+                        font-size: 85px; 
+                        line-height: 1;
+                    }
+                }
+            }
+
+            &-content {
+                img {
+                    @include breakpoint (max-lg) {
+                        width: 40%;
+                    }
+                }
+
+                h6 {
+                    color: $theme-color1;
+                    font-family: $body-font;
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 36px;
+                    text-transform: uppercase;
+                    padding-top: 18px;
+
+                    @include breakpoint (max-lg) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        &__desc2 {
+            padding-top: 122px;
+
+            @include breakpoint (max-lg) {
+                padding-top: 65px;
+            }
+
+            h4 {
+                @include breakpoint (max-md) {
+                    font-size: 30px;
+                    line-height: 45px;
+                }
+            }
+
+            span {
+                padding-right: 240px;
+                color: $white-color;
+                font-family: $body-font;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+                text-transform: uppercase;
+
+                img {
+                    padding-right: 10px;
+                }
+
+                @include breakpoint (max-md) {
+                    font-size: 20px;
+                    padding-right: 125px;
+                }
+            }
+        }
+    }
+}

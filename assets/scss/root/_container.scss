@@ -1,0 +1,41 @@
+@use '../root/variables' as *;
+@use '../root/mixins' as *;
+
+/*----------------------------------------------
+    # Container  style here
+----------------------------------------------*/ 
+@media (min-width:1800px) { 
+    .container, .container-xl{
+        max-width: 1794px;
+    }
+
+    .project2{
+        .container{
+            max-width: 100%;
+        }
+    }
+
+    .breadcumb1{
+        .container{
+            max-width: 1664px;
+        }
+    }
+
+    .pricing1{
+        .container{
+            max-width: 1600px;
+        }
+    }
+
+    .team1{
+        .container{
+            max-width: 1600px;
+        }
+    }
+
+    .blog-details {
+        .container{
+            max-width: 1320px;
+        }
+    }
+}

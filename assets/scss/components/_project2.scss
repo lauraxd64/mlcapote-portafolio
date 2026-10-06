@@ -1,0 +1,110 @@
+@use '../root' as *;
+@use '../utilities' as *;
+
+.project2 {
+    .section-top {
+        margin-bottom: 130px;
+    }
+
+    &-card {
+        position: relative;
+        padding: 75px;
+        border: 1px solid $theme-color1;
+        @include breakpoint (max-lg) {
+            padding: 30px;
+        }
+
+        &__thumb {
+            img {
+                position: relative;
+                z-index: 1;
+                border-radius: 50%;
+            }
+        }
+
+        &-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 35px;
+            border-radius: 100px;
+            border: 1px solid $theme-color1;
+            background-color: $white-color2;
+            margin-top: -90px;
+            z-index: 6;
+
+            @include breakpoint (max-lg) {
+                flex-wrap: wrap;
+            }
+
+            &__title {
+                color: $black-color2;
+                font-family: $title-font;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+
+                @media (max-width: 1500px) {
+                    font-size: 16px;
+                    line-height: 1.4;
+                }
+            }
+
+            &__tag {
+                position: relative;
+                color: $theme-color1;
+                font-family: $body-font;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+
+                @media (max-width: 1500px) {
+                    font-size: 15px;
+                    line-height: 1.4;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 1px;
+                    background-color: $black-color2;
+                    top: 15px;
+                    left: -70px;
+
+                    @media (max-width: 1500px) {
+                       top: 10px;
+                    }
+
+                    @include breakpoint (max-xl) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__year {
+            position: absolute;
+            top: 75px;
+            right: 75px;
+            padding: 7px 20px;
+            display: inline-block;
+            border-radius: 65px;
+            background: $theme-color1;
+            color: $white-color2;
+            font-family: $body-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; 
+            z-index: 5;
+        }
+    }
+
+    .btn-wrapper {
+        margin-top: 75px;
+    }
+}
